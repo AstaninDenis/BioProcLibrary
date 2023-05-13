@@ -19,7 +19,11 @@ kotlin {
         }
     }
     sourceSets {
-        val jvmMain by getting
+        val jvmMain by getting {
+            dependencies {
+                implementation("org.apache.commons:commons-math3:3.6.1")
+            }
+        }
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test"))
